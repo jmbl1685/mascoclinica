@@ -1,0 +1,152 @@
+*{
+  font-family: 'Poppins', sans-serif;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-attachment: fixed;
+  background-size: cover;
+  overflow-x: hidden;
+  font-size: 100%;
+  color: #3E3E3E
+}
+
+.text-center{
+  text-align: center;
+}
+
+#presentation-div{
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100vh;
+  margin: 0 auto;
+}
+
+.m-20{
+  margin: 20px !important;
+}
+
+.label-txt{
+  font-size: 15px;
+  display: block;
+  margin-bottom: 10px;
+}
+
+.input-txt{
+  font-size: 15px;
+  height: 40px;
+  width: 100%;
+  border: 1px solid #DDDDDD;
+  outline: none;
+}
+
+input {
+  padding: 12px 20px;
+  box-sizing: border-box;
+}
+
+.send-btn{
+  height: 50px;
+  width: 100%;
+  border: 1px solid transparent;
+  border-radius: 100px;
+  background-color: #34BF49;
+  color: white;
+  font-size: 20px;
+}
+
+#video-background {
+  width: 100%;
+  margin-top: -100vh;
+  z-index: -99;
+  position: absolute;
+}
+
+.center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  width: 100vw;
+  height: 100vh;
+  top: 0;
+  left: 0;
+}
+
+.yellow-text {
+  font-size: 50px;
+  color: #FFF02E;
+}
+
+.center-nav{
+  margin-top: 35vh;
+}
+
+.black-margin{
+  text-shadow:
+  -1px -1px 0 #000,
+  1px -1px 0 #000,
+  -1px 1px 0 #000,
+  1px 1px 0 #000; 
+}
+
+
+.gray-margin{
+  text-shadow:
+  -1px -1px 0 #484848,
+  1px -2px 0 #484848,
+  -1px 2px 0 #484848,
+  1px 2px 0 #484848; 
+}
+
+body::-webkit-scrollbar{
+  width: 5px;
+  background: #011925;
+}
+
+body::-webkit-scrollbar-thumb{
+  background: #34BF49;
+  border-radius: 5px;
+}
+
+#btn-navbar-responsive {
+  display: block;
+  position: fixed;
+  top: 10px;
+  right: 10px;
+  z-index: 99;
+  font-size: 18px;
+  border: none;
+  outline: none;
+  color: white;
+  cursor: pointer;
+  padding: 15px;
+  border-radius: 4px;
+}
+
+#btn-up {
+  display: block;
+  position: fixed;
+  bottom: 0;
+  right: 15px;
+  z-index: 99;
+  font-size: 18px;
+  border: none;
+  outline: none;
+  color: white;
+  cursor: pointer;
+  padding: 15px;
+  border-radius: 4px;
+}
+
+.item-nav{
+  color: #FFF02E;
+  cursor: pointer;
+  transition: 0.5s;
+}
+
+.item-nav:hover{
+  color: #34BF49;
+}
