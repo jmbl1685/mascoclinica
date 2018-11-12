@@ -47,6 +47,8 @@ myApp.controller("DefaultController", ($scope) => {
 
   $scope.description = "Dispuestos a atender a su mascota como se merece."
 
+  $scope.creator = "© 2018. All Rights Reserved | Design By Juan Batty"
+
 })
 
 myApp.controller("ServiceController", ($scope) => {
@@ -119,5 +121,12 @@ myApp.controller("AboutController", ($scope) => {
 myApp.controller("ContactController", ($scope) => {
 
   $scope.title = "CONTÁCTENOS"
+
+  $scope.information = {
+    address: 'Transversal 54# 27 - 75 Avenida Bosque Sector San Isidro | Cartagena, Bolívar - Colombia',
+    email: 'mascoclinica@outlook.com',
+    telephone: '(055) 643 10 08',
+    phone: '301 659 64 37'
+  }
 
 })

@@ -7,7 +7,7 @@ window.addEventListener("load", () => {
     startEvent: 'DOMContentLoaded',
     initClassName: 'aos-init',
     animatedClassName: 'aos-animate',
-    useClassNames: false, 
+    useClassNames: false,
     offset: 120,
     delay: 0,
     duration: 400,
@@ -22,7 +22,7 @@ window.addEventListener("load", () => {
 window.onscroll = () => {
 
   DisplayStyleValue(680, document.getElementById('btn-up'))
-  
+
 }
 
 
@@ -52,7 +52,7 @@ function RemoveClass(element, _class) {
 
 }
 
-function ScrollAnimation(e){
+function ScrollAnimation(e) {
 
   const classname = e.srcElement.id
   e.preventDefault()
@@ -60,21 +60,21 @@ function ScrollAnimation(e){
 
 }
 
-function ScrollUp(){
+function ScrollUp() {
   window.scroll({ top: 0, left: 0, behavior: 'smooth' })
 }
 
 function DisplayStyleValue(value, element) {
 
   let scroll = {
-      BODY: document.body.scrollTop,
-      DOCUMENT_ELEMENT: document.documentElement.scrollTop
+    BODY: document.body.scrollTop,
+    DOCUMENT_ELEMENT: document.documentElement.scrollTop
   }
 
   if (scroll.BODY > value || scroll.DOCUMENT_ELEMENT > value)
-      element.style.display = 'block'
+    element.style.display = 'block'
   else
-      element.style.display = 'none'
+    element.style.display = 'none'
 }
 
 

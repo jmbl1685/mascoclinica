@@ -150,3 +150,10 @@ body::-webkit-scrollbar-thumb{
 .item-nav:hover{
   color: #34BF49;
 }
+
+#footer-page{
+  background-color: #2C3E50;
+  position: absolute;
+  color: #fff;
+  width: 100%;
+}
