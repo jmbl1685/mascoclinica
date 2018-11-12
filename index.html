@@ -92,8 +92,8 @@
 
       <div ng-repeat="service in services" class="services col-sm-12 col-md-6 col-lg-4 col-xl-4 text-center"><br>
         <img style="height: 80px; width: 80px" class="logo-size" ng-src="{{service.logo}}">
-        <h3 class="ng-binding">{{service.serviceTitle}}</h3>
-        <p class="ng-binding">{{service.description}}</p>
+        <h3>{{service.serviceTitle}}</h3>
+        <p style="text-align: justify">{{service.description}}</p>
       </div>
 
     </div>
@@ -138,6 +138,24 @@
       </div><br>
 
     </div>
+
+    <div class="container" ng-controller="DefaultController">
+      <div class="row">
+
+        <div class="col-12">
+          <h1 class="text-center">MASCOTA DEL MES</h1>
+        </div>
+
+        <div style="margin: 0 auto;">
+          <img src="img/pets_month/pets_month.jpg" style="height: 300px; width: 300px; border: 3px solid #40596B">
+          <img src="https://image.flaticon.com/icons/svg/610/610333.svg" style="height: 80px; width: 80px; position: absolute; margin-top: -50px; margin-left: auto; margin-right: auto; left: 0; right: 0;">
+          <h2 class="text-center " style="color: #FFD15C">Sophie</h2>
+        </div>
+
+      </div>
+    </div>
+
+
 
     <div class="container" ng-controller="ContactController">
       <div class="contact row">
