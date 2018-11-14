@@ -1,0 +1,64 @@
+<div class="container prueba">
+  <div class="contact row">
+
+    <div class="col-12">
+      <h1 class="text-center">{{title}}</h1>
+    </div>
+
+    <div class="col-sm-12 col-md-6 col-lg-6 col-xl-6">
+      <form name="contactForm" id="form" #form="ngForm" (ngSubmit)="SendMessage(form)">
+
+        <p class="fs-13">Nombre*<br>
+          <input type="text" class="input-txt" name="name" id="name" ngModel>
+        </p>
+
+        <p class="fs-13">Apellido*<br>
+          <input type="text" class="input-txt" name="lastname" id="lastname" ngModel>
+        </p>
+
+        <p class="fs-13">Teléfono<br>
+          <input type="tel" class="input-txt" name="telephone" id="telephone" ngModel>
+        </p>
+
+        <p class="fs-13">Celular* (10 dígitos)<br>
+          <input type="tel" class="input-txt" name="phone" id="phone" ngModel>
+        </p>
+
+        <p class="fs-13">Correo Electrónico*<br>
+          <input type="email" class="input-txt" name="email" id="email" ngModel>
+        </p>
+
+        <p class="fs-13">Asunto*<br>
+          <input type="text" class="input-txt" name="issue" id="issue" ngModel>
+        </p>
+
+        <p class="fs-13">Comentarios*<br>
+          <textarea type="text" class="input-txt textarea" name="comment" id="comment" ngModel></textarea>
+        </p>
+
+        <div class="g-recaptcha" id="recaptcha" name="recaptcha" data-sitekey="6LcfMXcUAAAAAH3i2wZPdSogEmD8cxh1lbQa80dh"></div><br />
+
+        <input type="submit" class="send-btn" value="Send">
+
+      </form>
+
+      <h3 id="notify_success" class="text-center success none"><i class="fas fa-envelope"></i> Mensaje enviado
+        exitosamente!</h3>
+
+      <h3 id="notify_error" class="text-center error none"><i class="fas fa-envelope"></i> Ha ocurrido un error,
+        intente
+        de nuevo!</h3>
+
+    </div>
+    <div class="col-sm-12 col-md-6 col-lg-6 col-xl-6">
+      <h2><i class="fas fa-map-marker-alt"></i> Dirección:</h2>
+      <p>{{information.address}}</p>
+      <h2><i class="fas fa-envelope"></i> Correo Electrónico:</h2>
+      <p>{{information.email}}</p>
+      <h2><i class="fas fa-phone"></i> Teléfono:</h2>
+      <p>{{information.telephone}}</p>
+      <h2><i class="fas fa-mobile"></i> Celular:</h2>
+      <p><i class="fab fa-whatsapp"></i> {{information.phone}}</p>
+    </div>
+  </div>
+</div><br><br>
