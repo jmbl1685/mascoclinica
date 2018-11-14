@@ -1,6 +1,6 @@
-const myApp = angular.module("myApp", [])
+const myApp = angular.module("myApp", ['vcRecaptcha'])
 
-myApp.controller("DefaultController", ($scope) => {
+myApp.controller("DefaultController", function ($scope) {
 
   $scope.title = {
     "part1": "Equipo de alta ",
@@ -48,12 +48,11 @@ myApp.controller("DefaultController", ($scope) => {
   ]
 
   $scope.description = "Dispuestos a atender a su mascota como se merece."
-
   $scope.creator = "Copyright © 2018 desarrollado por: Juan Batty"
 
 })
 
-myApp.controller("ServiceController", ($scope) => {
+myApp.controller("ServiceController", function ($scope) {
 
   $scope.title = "NUESTROS SERVICIOS"
 
@@ -112,7 +111,7 @@ myApp.controller("ServiceController", ($scope) => {
 
 })
 
-myApp.controller("AboutController", ($scope) => {
+myApp.controller("AboutController", function ($scope) {
 
   $scope.title = "ACERCA DE NOSOTROS"
 
@@ -130,7 +129,9 @@ myApp.controller("AboutController", ($scope) => {
 
 })
 
-myApp.controller("ContactController", ($scope) => {
+myApp.controller("ContactController", function ($scope, contact) {
+
+  $scope.userinfo = {}
 
   $scope.title = "CONTÁCTENOS"
 
@@ -141,4 +142,68 @@ myApp.controller("ContactController", ($scope) => {
     phone: '301 659 64 37'
   }
 
+  $scope.response = null;
+  $scope.key = "6LcfMXcUAAAAAH3i2wZPdSogEmD8cxh1lbQa80dh"
+
+  $scope.recaptchaResponse = function (token) {
+    $scope.response = token
+  };
+
+  $scope.sendMessage = function () {
+
+    if ($scope.contactForm.$valid) {
+
+      const userinfo = $scope.userinfo
+
+      const validation = {
+        recaptcha: $scope.response
+      }
+
+      const data = Object.assign(userinfo, validation)
+
+      console.log(data)
+
+      contact.SentMessage(data)
+        .then(res => {
+          $scope.userinfo = {}
+          $scope.contactForm.$setPristine(true);
+          Notification("notify_success")
+        })
+        .catch(err => {
+          Notification("notify_error")
+        })
+
+
+    }
+
+  }
+
 })
+
+myApp.service('contact', function ($http) {
+
+  this.SentMessage = function (userinfo) {
+    console.log(userinfo)
+    return $http({
+      method: 'GET',
+      url: 'https://raw.githubusercontent.com/jmbl1685/diskdb-sample-nodejs/master/data/frameworks.json',
+      headers: { 'Content-Type': 'application/json' }
+    }).then(function (res) {
+      return res;
+    }).catch(function (err) {
+      return err;
+    })
+  }
+
+})
+
+// ------------------------------------------------- //
+
+function Notification(valueId){
+  let notify = document.getElementById(valueId)
+  console.log(notify)
+  notify.style.display = "block"  
+  setTimeout(() => {
+    notify.style.display = "none"
+  }, 4000)
+}

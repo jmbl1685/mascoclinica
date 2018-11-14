@@ -43,8 +43,6 @@
 	<link rel="stylesheet" type="text/css" href="css/aos.css" />
 	<link rel="stylesheet" type="text/css" href="css/grid.css">
 	<link rel="stylesheet" type="text/css" href="css/animate.css">
-	<link rel="stylesheet" type="text/css" href="css/grid.css">
-	<link rel="stylesheet" type="text/css" href="//cdnjs.cloudflare.com/ajax/libs/lightgallery/1.6.11/css/lightgallery.min.css" />
 	<link rel="stylesheet" type="text/css" href="css/material-photo-gallery.css">
 
 	<link rel="stylesheet" type="text/css" href="css/style.css">
@@ -129,7 +127,6 @@
 			</div>
 		</div><br><br>
 
-
 	</div>
 
 	<div class="center" id="presentation-div" ng-style="{'background-image': 'url(https://www.petsbureau.co.uk/wp-content/uploads/2017/03/barking-feature1.png)', 'height': '300px'}">
@@ -141,62 +138,25 @@
 
 	</div><br><br>
 
-	<div class="container" ng-controller="DefaultController">
+	<div class="container">
 		<div class="row">
 
 			<div class="col-12">
 				<h1 class="text-center">GALERÍA</h1>
 			</div>
 
-			<div class="m-p-g">
+			<div class="m-p-g gallery">
 				<div class="m-p-g__thumbs" data-google-image-layout data-max-height="350">
 					<img ng-repeat="image in gallery" ng-src="{{image.name_img}}" data-full="{{image.name_img}}" class="m-p-g__thumbs-img" />
 				</div>
-		
+
 				<div class="m-p-g__fullscreen"></div>
 			</div>
 
-			<!-- <div id="lightgallery" class="row" style="margin: 0 auto; width: 50vw ">
-
-        <a ng-repeat="image in gallery" class="gallery col-sm-12 col-md-6 col-lg-4 col-xl-4" ng-href="{{image.name_img}}">
-          <img class="m-20" ng-src="{{image.name_img}}" style="height: 200px; width: 200px; background-position: center; background-repeat: no-repeat; background-size: cover; border: 1px solid #BDC2C3;" />
-        </a>
-
-			</div><br> -->
-			
-
-
 		</div>
-
-
 		<div>
 
-			<!-- <div id="lightgallery" class="wrap">
-
-        <a ng-repeat="image in gallery" class="gallery box" ng-href="{{image.name_img}}">
-          <img class="boxInner" ng-src="{{image.name_img}}" />
-        </a>
-
-      </div> -->
-
-
 		</div>
-
-		<!-- <div class="container" ng-controller="DefaultController">
-      <div class="row">
-
-        <div class="col-12">
-          <h1 class="text-center">MASCOTA DEL MES</h1>
-        </div>
-
-        <div style="margin: 0 auto;">
-          <img src="img/pets_month/pets_month.jpg" style="height: 300px; width: 300px; border: 3px solid #40596B">
-          <img src="https://image.flaticon.com/icons/svg/610/610333.svg" style="height: 80px; width: 80px; position: absolute; margin-top: -50px; margin-left: auto; margin-right: auto; left: 0; right: 0;">
-          <h2 class="text-center " style="color: #FFD15C">Sophie</h2>
-        </div>
-
-      </div>
-    </div> -->
 
 		<div class="container" ng-controller="ContactController">
 			<div class="contact row">
@@ -206,62 +166,74 @@
 				</div>
 
 				<div class="col-sm-12 col-md-6 col-lg-6 col-xl-6">
-					<form action="#" method="post" name="sentMessage" id="contactForm" novalidate="">
-						<div class="control-group form-group">
-							<div class="controls">
-								<label class="label-txt">Nombre</label>
-								<input type="text" class="input-txt" name="name" id="name">
-								<p class="help-block"></p>
-							</div>
-						</div>
-						<div class="control-group form-group">
-							<div class="controls">
-								<label class="label-txt">Apellidos</label>
-								<input type="tel" class="input-txt" name="phone" id="phone">
-								<p class="help-block"></p>
-							</div>
-						</div>
-						<div class="control-group form-group">
-							<div class="controls">
-								<label class="label-txt">Télefono</label>
-								<input type="email" class="input-txt" name="email" id="email">
-								<p class="help-block"></p>
-							</div>
-						</div>
-						<div class="control-group form-group">
-							<div class="controls">
-								<label class="label-txt">Celular</label>
-								<input type="text" class="input-txt" name="phone" id="phone">
-								<p class="help-block"></p>
-							</div>
-						</div>
-						<div class="control-group form-group">
-							<div class="controls">
-								<label class="label-txt">Correo Electrónico</label>
-								<input type="email" class="input-txt" name="email" id="email">
-								<p class="help-block"></p>
-							</div>
-						</div>
-						<div class="control-group form-group">
-							<div class="controls">
-								<label class="label-txt">Asunto</label>
-								<input type="text" class="input-txt" name="issue" id="issue">
-								<p class="help-block"></p>
-							</div>
-						</div>
-						<div class="control-group form-group">
-							<div class="controls">
-								<label class="label-txt">Comentarios</label>
-								<textarea type="text" class="input-txt" name="comment" id="comment"></textarea>
-								<p class="help-block"></p>
-							</div>
-						</div>
+					<form name="contactForm" novalidate ng-submit="sendMessage()">
 
-						<div style="text-align: center" class="g-recaptcha" id="recaptcha" name="recaptcha" data-sitekey="6LcfMXcUAAAAAH3i2wZPdSogEmD8cxh1lbQa80dh"></div><br />
+						<p class="fs-13">Nombre*<br>
+							<input type="text" class="input-txt" name="name" id="name" ng-model="userinfo.name" required>
+							<span class="validation-ms" ng-show="contactForm.name.$dirty && contactForm.name.$invalid">
+								<span ng-show="contactForm.name.$error.required">El nombre es requerido.</span>
+							</span>
+						</p>
 
-						<button type="submit" class="send-btn">Send</button>
+						<p class="fs-13">Apellido*<br>
+							<input type="text" class="input-txt" name="lastname" id="lastname" ng-model="userinfo.lastname" required>
+							<span class="validation-ms" ng-show="contactForm.lastname.$dirty && contactForm.lastname.$invalid">
+								<span ng-show="contactForm.lastname.$error.required">El apellido es requerido.</span>
+							</span>
+						</p>
+
+						<p class="fs-13">Teléfono*<br>
+							<input type="tel" class="input-txt" name="telephone" id="telephone" ng-model="userinfo.telephone" ng-pattern="/^[0-9]*$/"
+							 required>
+							<span class="validation-ms" ng-show="contactForm.telephone.$dirty && contactForm.telephone.$invalid">
+								<span ng-show="contactForm.telephone.$error.required">El teléfono es requerido.</span>
+								<span ng-show="contactForm.telephone.$error.pattern">Ingrese solamente números.</span>
+							</span>
+						</p>
+
+						<p class="fs-13">Celular* (10 dígitos)<br>
+							<input type="tel" class="input-txt" name="phone" id="phone" ng-model="userinfo.phone" ng-pattern="/^[0-9]*$/"
+							 ng-minlength="10" ng-maxlength="10" required>
+							<span class="validation-ms" ng-show="contactForm.phone.$dirty && contactForm.phone.$invalid">
+								<span ng-show="contactForm.phone.$error.required">El celular es requerido.</span>
+								<span ng-show="contactForm.phone.$error.pattern">Ingrese solamente números.</span>
+							</span>
+						</p>
+
+						<p class="fs-13">Correo Electrónico*<br>
+							<input type="email" class="input-txt" name="email" id="email" ng-model="userinfo.email" required>
+							<span class="validation-ms" ng-show="contactForm.email.$dirty && contactForm.email.$invalid">
+								<span ng-show="contactForm.email.$error.required">El correo electrónico es requerido.</span>
+								<span ng-show="contactForm.email.$error.email">Correo electrónico inválido. </span>
+							</span>
+						</p>
+
+						<p class="fs-13">Asunto*<br>
+							<input type="text" class="input-txt" name="issue" id="issue" ng-model="userinfo.issue" required>
+							<span class="validation-ms" ng-show="contactForm.issue.$dirty && contactForm.issue.$invalid">
+								<span ng-show="contactForm.issue.$error.required">El asunto es requerido.</span>
+							</span>
+						</p>
+
+						<p class="fs-13">Comentarios*<br>
+							<textarea type="text" class="input-txt textarea" name="comment" id="comment" ng-model="userinfo.comment"
+							 required></textarea>
+
+							<span class="validation-ms" ng-show="contactForm.comment.$dirty && contactForm.comment.$invalid">
+								<span ng-show="contactForm.comment.$error.required">Los comentarios son requeridos.</span>
+							</span>
+						</p>
+
+						<div vc-recaptcha theme="'light'" key="key" on-success="recaptchaResponse(response)"></div><br>
+
+						<input type="submit" class="send-btn" value="Send" ng-disabled="contactForm.$invalid">
 
 					</form>
+
+					<h3 id="notify_success" class="text-center success none"><i class="fas fa-envelope"></i> Mensaje enviado exitosamente!</h3>
+
+					<h3 id="notify_error" class="text-center error none"><i class="fas fa-envelope"></i> Ha ocurrido un error, intente de nuevo!</h3>
+
 				</div>
 				<div class="col-sm-12 col-md-6 col-lg-6 col-xl-6">
 					<h2><i class="fas fa-map-marker-alt"></i> Dirección:</h2>
@@ -271,7 +243,7 @@
 					<h2><i class="fas fa-phone"></i> Teléfono:</h2>
 					<p>{{information.telephone}}</p>
 					<h2><i class="fas fa-mobile"></i> Celular:</h2>
-					<p>{{information.phone}}</p>
+					<p><i class="fab fa-whatsapp"></i> {{information.phone}}</p>
 				</div>
 			</div>
 		</div><br><br>
@@ -285,7 +257,7 @@
 	</footer><br><br>
 
 	<script src='//www.google.com/recaptcha/api.js'></script>
-	<script type="text/javascript" src="js/lightgallery.js"></script>
+	<script type="text/javascript" src="js/angular-recaptcha.js"></script>
 	<script type="text/javascript" src="js/smoothscroll.js"></script>
 	<script type="text/javascript" src="js/aos.js"></script>
 	<script type="text/javascript" src="js/material-photo-gallery.min.js"></script>

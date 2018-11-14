@@ -2,6 +2,10 @@
   font-family: 'Poppins', sans-serif;
 }
 
+.none{
+  display: none;
+}
+
 body {
   margin: 0;
   padding: 0;
@@ -9,7 +13,11 @@ body {
   background-size: cover;
   overflow-x: hidden;
   font-size: 100%;
-  color: #3E3E3E
+  color: #3E3E3E;
+}
+
+.fs-13{
+  font-size: 13px;
 }
 
 .text-center{
@@ -55,6 +63,22 @@ input {
   background-color: #34BF49;
   color: white;
   font-size: 20px;
+}
+
+.textarea{
+  height: 200px;
+  padding: 19px;
+  resize: none;
+}
+
+
+input[type="submit"]:disabled {
+  opacity: 0.4
+}
+
+.validation-ms{
+  color: red;
+  font-size: 11.5px;
 }
 
 #video-background {
@@ -158,9 +182,10 @@ body::-webkit-scrollbar-thumb{
   width: 100%;
 }
 
-/* ------------------------ <GALLERY STYLE/> -------------------------- */
+.success {
+  color: #34BF49;
+}
 
-
-
-
-/* ------------------------ </GALLERY STYLE/> -------------------------- */
+.error {
+  color: #D82B21;
+}

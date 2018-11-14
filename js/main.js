@@ -1,6 +1,6 @@
 window.addEventListener("load", () => {
 
-  lightGallery(document.getElementById('lightgallery'))
+  // lightGallery(document.getElementById('lightgallery'))
 
   AOS.init({
     disable: false,
@@ -42,7 +42,6 @@ function NavBarHandle() {
     AddClass(navbar, "fadeOutRight")
     RemoveClass(navbar, "fadeOutRight")
   }
-
 }
 
 function AddClass(element, _class) {
