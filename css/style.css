@@ -2,6 +2,37 @@
   font-family: 'Poppins', sans-serif;
 }
 
+.menu-btn {
+  margin-top: 1px;
+  margin-right: -10px;
+  position: fixed;
+  z-index: 99;
+  right: 35px;
+  top: 30px;
+  cursor: pointer;
+  transition: all 0.5s ease-out; }
+  .menu-btn .btn-line {
+    width: 39px;
+    height: 8px;
+    margin: 0 0 5px 0;
+    background: #FFF02E;
+    border-radius: 10px;
+    transition: all 0.5s ease-out; }
+  .menu-btn.close {
+    transform: rotate(180deg); }
+    .menu-btn.close .btn-line:nth-child(1) {
+      transform: rotate(45deg) translate(5px, 5px); }
+    .menu-btn.close .btn-line:nth-child(2) {
+      margin: 0 0 -5px 0;
+      transform: rotate(45deg);
+      opacity: 0; }
+    .menu-btn.close .btn-line:nth-child(3) {
+      transform: rotate(-45deg) translate(7px, -6px); }
+    .menu-btn.close .btn-line:nth-child(4) {
+      transform: rotate(45deg);
+      opacity: 0; }
+
+
 .none{
   display: none;
 }

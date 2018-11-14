@@ -1,61 +1,17 @@
-window.addEventListener("load", () => {
+let navbar = document.getElementById("navbar")
+const menuBtn = document.querySelector('.menu-btn');
+let elem = document.querySelector('.m-p-g');
 
-  // lightGallery(document.getElementById('lightgallery'))
+let showMenu = false;
 
-  AOS.init({
-    disable: false,
-    startEvent: 'DOMContentLoaded',
-    initClassName: 'aos-init',
-    animatedClassName: 'aos-animate',
-    useClassNames: false,
-    offset: 120,
-    delay: 0,
-    duration: 400,
-    easing: 'ease',
-    once: false,
-    mirror: false,
-    anchorPlacement: 'top-bottom',
-  })
-
-})
-
-var elem = document.querySelector('.m-p-g');
+menuBtn.addEventListener('click', toggleMenu);
 
 document.addEventListener('DOMContentLoaded', function () {
-  var gallery = new MaterialPhotoGallery(elem);
+  let gallery = new MaterialPhotoGallery(elem);
 });
-
 
 window.onscroll = () => {
   DisplayStyleValue(680, document.getElementById('btn-up'))
-}
-
-
-function NavBarHandle() {
-
-  let navbar = document.getElementById("navbar")
-  navbar.style.display = "block"
-
-  if (navbar.classList[1] == "fadeInRight") {
-    RemoveClass(navbar, "fadeInRight")
-  } else {
-    AddClass(navbar, "fadeOutRight")
-    RemoveClass(navbar, "fadeOutRight")
-  }
-}
-
-function AddClass(element, _class) {
-  element.classList.add(_class)
-}
-
-function RemoveClass(element, _class) {
-  setTimeout(() => {
-    element.classList.remove(_class)
-    if (_class == "fadeOutRight") {
-      navbar.style.display = "none"
-      AddClass(navbar, "fadeInRight")
-    }
-  }, 900)
 }
 
 function ScrollAnimation(e) {
@@ -80,4 +36,18 @@ function DisplayStyleValue(value, element) {
     element.style.display = 'none'
 }
 
+function toggleMenu() {
+  if (!showMenu) {
+    navbar.style.display = "block"
+    navbar.classList.remove("fadeOutRight")
+    navbar.classList.add("fadeInRight")
+    menuBtn.classList.add('close');
+    showMenu = true;
+  } else {
+    navbar.classList.remove("fadeInRight")
+    navbar.classList.add("fadeOutRight")
+    menuBtn.classList.remove('close');
+    showMenu = false;
+  }
+}
 
