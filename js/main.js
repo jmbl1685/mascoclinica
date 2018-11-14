@@ -20,9 +20,7 @@ window.addEventListener("load", () => {
 })
 
 window.onscroll = () => {
-
   DisplayStyleValue(680, document.getElementById('btn-up'))
-
 }
 
 
@@ -34,30 +32,30 @@ function NavBarHandle() {
   if (navbar.classList[1] == "fadeInRight") {
     RemoveClass(navbar, "fadeInRight")
   } else {
-    navbar.classList.add("fadeOutRight")
+    AddClass(navbar,"fadeOutRight")
     RemoveClass(navbar, "fadeOutRight")
   }
 
 }
 
-function RemoveClass(element, _class) {
+function AddClass(element, _class){
+  element.classList.add(_class)
+}
 
+function RemoveClass(element, _class) {
   setTimeout(() => {
     element.classList.remove(_class)
     if (_class == "fadeOutRight") {
       navbar.style.display = "none"
-      navbar.classList.add("fadeInRight")
+      AddClass(navbar,"fadeInRight")
     }
   }, 900)
-
 }
 
 function ScrollAnimation(e) {
-
   const classname = e.srcElement.id
   e.preventDefault()
   document.querySelector(`.${classname}`).scrollIntoView({ behavior: 'smooth' })
-
 }
 
 function ScrollUp() {
@@ -65,12 +63,10 @@ function ScrollUp() {
 }
 
 function DisplayStyleValue(value, element) {
-
   let scroll = {
     BODY: document.body.scrollTop,
     DOCUMENT_ELEMENT: document.documentElement.scrollTop
   }
-
   if (scroll.BODY > value || scroll.DOCUMENT_ELEMENT > value)
     element.style.display = 'block'
   else

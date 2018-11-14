@@ -47,7 +47,7 @@ myApp.controller("DefaultController", ($scope) => {
 
   $scope.description = "Dispuestos a atender a su mascota como se merece."
 
-  $scope.creator = "© 2018. All Rights Reserved | Design By Juan Batty"
+  $scope.creator = "Copyright © 2018 desarrollado por: Juan Batty"
 
 })
 
@@ -115,6 +115,16 @@ myApp.controller("AboutController", ($scope) => {
   $scope.title = "ACERCA DE NOSOTROS"
 
   $scope.description = "Mascoclinica fundada en el año 2015 tiene como misión Satisfacer la necesidad médico-clínica de los pacientes brindando un servicio de excelente calidad para así alcanzar nuestro objetivo principal que es la salud y bienestar de las mascotas."
+
+  $scope.mision = {
+    title: 'NUESTRA MISIÓN',
+    description: 'Satisfacer las necesidades médicas y estéticas (peluquerias y spa) brindando un servicio de excelente calidad para así alcanzar nuestro objetivo principal que es la salud y bienestar de nuestros pacientes.'
+  }
+
+  $scope.vision = {
+    title: 'NUESTRA VISIÓN',
+    description: 'Ser una clínica lider a nivel regional por su amplio portafolio de servicios con estandares de alta calidad, brindando excelencia y calor de hogar a todos nuestros pacientes.'
+  }
 
 })
 
