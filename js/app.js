@@ -32,17 +32,19 @@ myApp.controller("DefaultController", ($scope) => {
   ]
 
   $scope.gallery = [
-    { name_img: 'img/gallery/001.jpg' },
-    { name_img: 'img/gallery/002.jpg' },
-    { name_img: 'img/gallery/003.jpg' },
-    { name_img: 'img/gallery/004.jpg' },
-    { name_img: 'img/gallery/005.jpg' },
-    { name_img: 'img/gallery/006.jpg' },
-    { name_img: 'img/gallery/007.jpg' },
-    { name_img: 'img/gallery/008.jpg' },
-    { name_img: 'img/gallery/009.jpg' },
-    { name_img: 'img/gallery/010.png' },
-    { name_img: 'img/gallery/011.png' }
+    { name_img: 'img/gallery/1.jpg' },
+    { name_img: 'img/gallery/2.jpg' },
+    { name_img: 'img/gallery/3.jpg' },
+    { name_img: 'img/gallery/4.jpg' },
+    { name_img: 'img/gallery/5.jpg' },
+    { name_img: 'img/gallery/6.jpg' },
+    { name_img: 'img/gallery/7.jpg' },
+    { name_img: 'img/gallery/8.jpg' },
+    { name_img: 'img/gallery/9.jpg' },
+    { name_img: 'img/gallery/10.png' },
+    { name_img: 'img/gallery/11.png' },
+    { name_img: 'img/gallery/12.jpg' },
+    { name_img: 'img/gallery/13.jpg' }
   ]
 
   $scope.description = "Dispuestos a atender a su mascota como se merece."

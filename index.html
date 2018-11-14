@@ -6,12 +6,16 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>MascoClinica</title>
+	<meta name="description" content="">
 	<link rel="shortcut icon" href="img/myfavico_20150709113452.ico">
 	<link rel="canonical" href="https://jmbl1685.github.io/mascoclinica/">
 	<meta name="robots" content="ALL">
 	<meta name="author" content="Juan Manuel Batty Linero">
-	<link rel="author" href="https://twitter.com/jmbl1685/">
-
+	<meta name="HandheldFriendly" content="True">
+	<meta name="MobileOptimized" content="320">
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge">
 	<meta name="description" content="MascoClinica">
 	<meta http-equiv="content-language" content="en-us">
 	<meta property="og:locale" content="en_us">
@@ -41,6 +45,8 @@
 	<link rel="stylesheet" type="text/css" href="css/animate.css">
 	<link rel="stylesheet" type="text/css" href="css/grid.css">
 	<link rel="stylesheet" type="text/css" href="//cdnjs.cloudflare.com/ajax/libs/lightgallery/1.6.11/css/lightgallery.min.css" />
+	<link rel="stylesheet" type="text/css" href="css/material-photo-gallery.css">
+
 	<link rel="stylesheet" type="text/css" href="css/style.css">
 
 	<script type="text/javascript" src="js/angular.min.js"></script>
@@ -142,6 +148,13 @@
 				<h1 class="text-center">GALERÍA</h1>
 			</div>
 
+			<div class="m-p-g">
+				<div class="m-p-g__thumbs" data-google-image-layout data-max-height="350">
+					<img ng-repeat="image in gallery" ng-src="{{image.name_img}}" data-full="{{image.name_img}}" class="m-p-g__thumbs-img" />
+				</div>
+		
+				<div class="m-p-g__fullscreen"></div>
+			</div>
 
 			<!-- <div id="lightgallery" class="row" style="margin: 0 auto; width: 50vw ">
 
@@ -149,7 +162,9 @@
           <img class="m-20" ng-src="{{image.name_img}}" style="height: 200px; width: 200px; background-position: center; background-repeat: no-repeat; background-size: cover; border: 1px solid #BDC2C3;" />
         </a>
 
-      </div><br> -->
+			</div><br> -->
+			
+
 
 		</div>
 
@@ -273,6 +288,7 @@
 	<script type="text/javascript" src="js/lightgallery.js"></script>
 	<script type="text/javascript" src="js/smoothscroll.js"></script>
 	<script type="text/javascript" src="js/aos.js"></script>
+	<script type="text/javascript" src="js/material-photo-gallery.min.js"></script>
 	<script type="text/javascript" src="js/main.js"></script>
 
 </body>

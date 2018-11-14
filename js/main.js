@@ -19,6 +19,13 @@ window.addEventListener("load", () => {
 
 })
 
+var elem = document.querySelector('.m-p-g');
+
+document.addEventListener('DOMContentLoaded', function () {
+  var gallery = new MaterialPhotoGallery(elem);
+});
+
+
 window.onscroll = () => {
   DisplayStyleValue(680, document.getElementById('btn-up'))
 }
@@ -32,13 +39,13 @@ function NavBarHandle() {
   if (navbar.classList[1] == "fadeInRight") {
     RemoveClass(navbar, "fadeInRight")
   } else {
-    AddClass(navbar,"fadeOutRight")
+    AddClass(navbar, "fadeOutRight")
     RemoveClass(navbar, "fadeOutRight")
   }
 
 }
 
-function AddClass(element, _class){
+function AddClass(element, _class) {
   element.classList.add(_class)
 }
 
@@ -47,7 +54,7 @@ function RemoveClass(element, _class) {
     element.classList.remove(_class)
     if (_class == "fadeOutRight") {
       navbar.style.display = "none"
-      AddClass(navbar,"fadeInRight")
+      AddClass(navbar, "fadeInRight")
     }
   }, 900)
 }
