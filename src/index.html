@@ -1,5 +1,6 @@
 <!doctype html>
 <html lang="en">
+
 <head>
   <meta charset="utf-8">
   <title>Mascoclinica</title>
@@ -10,14 +11,35 @@
 
   <link rel="stylesheet" type="text/css" href="//use.fontawesome.com/releases/v5.5.0/css/all.css">
   <link href="//fonts.googleapis.com/css?family=Josefin+Sans:100,100i,300,300i,400,400i,600,600i,700,700i" rel="stylesheet">
-	<link href="//fonts.googleapis.com/css?family=Poppins:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800"
-   rel="stylesheet">
-   
+  <link href="//fonts.googleapis.com/css?family=Poppins:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800"
+    rel="stylesheet">
+
 </head>
+
 <body>
+  <style>
+    .center {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        width: 100vw;
+        height: 100vh;
+        top: 0;
+        left: 0;
+      }
+
+      .loading{
+        height: 50px;
+        width: 50px;
+      }
+  </style>
   <app-root>
-    <h1>Hello World</h1>
+    <div class="center">
+      <img class="loading" src="https://res.cloudinary.com/batty/image/upload/v1542586492/cdn/mascoclinica/cargando.gif">
+    </div>
   </app-root>
   <script type="text/javascript" src='//www.google.com/recaptcha/api.js'></script>
 </body>
+
 </html>
