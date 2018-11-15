@@ -71,6 +71,14 @@ input {
   resize: none;
 }
 
+#mc_logo{
+  height: 150px; 
+  width: 180px; 
+  margin: 13%; 
+  left: 0; 
+  position: absolute; 
+  margin-top: -230px;
+}
 
 input[type="submit"]:disabled {
   opacity: 0.4
@@ -82,10 +90,16 @@ input[type="submit"]:disabled {
 }
 
 #video-background {
-  width: 100%;
   margin-top: -100vh;
   z-index: -99;
+  object-fit: cover;
+  height: 100vh;
+  width: 100vw;
   position: absolute;
+}
+
+.service-container{
+  margin-top: 20vh;
 }
 
 .center {
@@ -182,10 +196,99 @@ body::-webkit-scrollbar-thumb{
   width: 100%;
 }
 
+.gallery{
+  z-index: 1
+}
+
+#navbar{
+  z-index: 98 !important;
+}
+
 .success {
   color: #34BF49;
 }
 
 .error {
   color: #D82B21;
+}
+
+/* Responsive Video Background */
+
+@media only screen and (max-width: 850px){
+
+  .mc_title{
+    font-size: 5vh;
+    letter-spacing: 0ch;
+  }
+
+  .mc_description{
+    margin-top: 0.2px !important;
+    font-size: 3vh !important
+  }
+
+  .copyright{
+    margin-left: 5px;
+    margin-right: 5px;
+  }
+
+  .service-container{
+    margin-top: 8vh;
+  }
+
+  #mc_logo{
+    height: 150px; 
+    width: 180px; 
+    margin: 0 auto; 
+    left: 0; 
+    right: 0;
+    position: absolute; 
+    margin-top: -180px;
+  }
+
+}
+
+@media only screen and (max-width: 386px){
+
+  .mc_title{
+    margin-top: 20%;
+  }
+
+}
+
+/* Animations */
+
+.animated{
+  animation-duration:0.6s;
+  animation-fill-mode:both
+}
+
+@keyframes fadeInRight{
+  from{
+      opacity:0;
+      transform:translate3d(100%,0,0)
+  }
+  to{
+      opacity:1;
+      transform:none
+  }
+}
+
+@keyframes fadeOutRight{
+  from{
+      opacity:1
+  }
+  to{
+      opacity:0;
+      transform:translate3d(100%,0,0)
+  }
+}
+
+.fadeInRight{
+  animation-name:fadeInRight;
+  transition: 0s;
+}
+
+.fadeOutRight{
+  animation-name:fadeOutRight;
+  transition: 0s;
 }

@@ -129,7 +129,7 @@ myApp.controller("AboutController", function ($scope) {
 
 })
 
-myApp.controller("ContactController", function ($scope, contact) {
+myApp.controller("ContactController", function ($scope, contact, vcRecaptchaService) {
 
   $scope.userinfo = {}
 
@@ -167,9 +167,11 @@ myApp.controller("ContactController", function ($scope, contact) {
         .then(res => {
           $scope.userinfo = {}
           $scope.contactForm.$setPristine(true);
+          vcRecaptchaService.reload()
           Notification("notify_success")
         })
         .catch(err => {
+          vcRecaptchaService.reload()
           Notification("notify_error")
         })
 

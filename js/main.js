@@ -62,6 +62,7 @@ function ScrollAnimation(e) {
   const classname = e.srcElement.id
   e.preventDefault()
   document.querySelector(`.${classname}`).scrollIntoView({ behavior: 'smooth' })
+  document.querySelector('.m-p-g__controls-close').click()
 }
 
 function ScrollUp() {
