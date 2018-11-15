@@ -11,7 +11,7 @@ const uglify = require('gulp-uglify-es').default
 
 const MODE = {
   compress: false,
-  path: './docs',
+  path: './',
   tasks: ['live-reload']
 }
 
@@ -45,41 +45,41 @@ if (MODE.compress) {
   ]
 
   gulp.task('views', function () {
-    return gulp.src(['./src/*.html'])
+    return gulp.src(['./originalcode/*.html'])
       .pipe(htmlmin({
         collapseWhitespace: true,
         removeComments: true
       }))
-      .pipe(gulp.dest('./docs'))
+      .pipe(gulp.dest('./'))
   })
 
   gulp.task('styles', function () {
-    return gulp.src('./src/css/*.css')
+    return gulp.src('./originalcode/css/*.css')
       .pipe(autoprefixer({ browsers: AUTOPREFIXER_BROWSERS }))
       .pipe(csso())
-      .pipe(gulp.dest('./docs/css'))
+      .pipe(gulp.dest('./css'))
   })
 
   gulp.task("scripts", function () {
-    return gulp.src(["./src/js/*.js", "!./src/js/app.js"])
+    return gulp.src(["./originalcode/js/*.js", "!./originalcode/js/app.js"])
       .pipe(uglify())
-      .pipe(gulp.dest("./docs/js"))
+      .pipe(gulp.dest("./js"))
   })
 
   gulp.task('app.js [not compress]', function () {
-    return gulp.src('./src/js/app.js')
-      .pipe(gulp.dest('./docs/js/'))
+    return gulp.src('./originalcode/js/app.js')
+      .pipe(gulp.dest('./js/'))
   })
 
   gulp.task('images', function () {
-    return gulp.src('./src/img/**')
+    return gulp.src('./originalcode/img/**')
       .pipe(image())
-      .pipe(gulp.dest('./docs/img'))
+      .pipe(gulp.dest('./img'))
   })
 
   gulp.task('videoCopy', function () {
-    return gulp.src('./src/video/**')
-      .pipe(gulp.dest('./docs/video/'))
+    return gulp.src('./originalcode/video/**')
+      .pipe(gulp.dest('./video/'))
   })
 
 }
