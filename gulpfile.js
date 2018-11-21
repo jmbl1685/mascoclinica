@@ -10,7 +10,7 @@ const server = require('gulp-server-livereload')
 const uglify = require('gulp-uglify-es').default
 
 const MODE = {
-  compress: true,
+  compress: false,
   path: './src',
   tasks: ['live-reload']
 }
@@ -33,6 +33,8 @@ const AUTOPREFIXER_BROWSERS = [
 ]
 
 if (MODE.compress) {
+
+  MODE.path = './docs'
 
   MODE.tasks = [
     'views',
