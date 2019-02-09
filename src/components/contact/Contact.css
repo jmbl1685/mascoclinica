@@ -1,0 +1,66 @@
+.label-txt {
+  font-size: 15px;
+  display: block;
+  margin-bottom: 10px;
+}
+
+.input-txt {
+  font-size: 15px;
+  height: 40px;
+  width: 100%;
+  border: 1px solid #dddddd;
+  outline: none;
+}
+
+input {
+  padding: 12px 20px;
+  box-sizing: border-box;
+}
+
+.send-btn {
+  margin-top: 12px;
+  height: 50px;
+  width: 100%;
+  border: 1px solid transparent;
+  border-radius: 100px;
+  background-color: #34bf49;
+  color: white;
+  font-size: 20px;
+  font-weight: bold;
+  outline: none;
+  cursor: pointer;
+  transition: 0.6s;
+}
+
+.send-btn:hover {
+  transition: 0.6s;
+  border: 2px solid #2c3e50;
+}
+
+.textarea {
+  height: 200px;
+  padding: 19px;
+  resize: none;
+}
+
+.social-icons i {
+  text-decoration: none;
+  padding: 10px;
+  font-size: 25px;
+  color: white;
+  margin: 1px 10px;
+  border-radius: 100px;
+  margin-bottom: 30px;
+}
+
+.facebook {
+  background-color: #3b5998;
+}
+
+.youtube {
+  background-color: #f44336;
+}
+
+.instagram {
+  background-color: #da2b6f;
+}

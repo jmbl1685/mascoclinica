@@ -1,0 +1,236 @@
+.dark-background {
+  background-color: rgba(0, 0, 0, 0.4);
+  background-blend-mode: multiply;
+  height: 100vh;
+  width: 100vw;
+  position: fixed;
+  z-index: 1;
+  display: none;
+}
+
+.menu-btn {
+  margin-top: 1px;
+  margin-right: -10px;
+  position: fixed;
+  z-index: 99;
+  right: 35px;
+  top: 30px;
+  cursor: pointer;
+  transition: all 0.5s ease-out;
+}
+.menu-btn .btn-line {
+  width: 39px;
+  height: 8px;
+  margin: 0 0 5px 0;
+  background: #fff02e;
+  border-radius: 10px;
+  transition: all 0.5s ease-out;
+}
+.menu-btn.close {
+  transform: rotate(180deg);
+}
+.menu-btn.close .btn-line:nth-child(1) {
+  transform: rotate(45deg) translate(5px, 5px);
+}
+.menu-btn.close .btn-line:nth-child(2) {
+  margin: 0 0 -5px 0;
+  transform: rotate(45deg);
+  opacity: 0;
+}
+.menu-btn.close .btn-line:nth-child(3) {
+  transform: rotate(-45deg) translate(7px, -6px);
+}
+.menu-btn.close .btn-line:nth-child(4) {
+  transform: rotate(45deg);
+  opacity: 0;
+}
+
+#loading {
+  position: fixed;
+  z-index: 99;
+  height: 100vh;
+  width: 100vw;
+  background-color: #fff;
+  display: none;
+}
+
+.mc_description {
+  color: #ffffff;
+  font-size: 30px;
+  margin-top: -30px;
+  font-weight: bold;
+}
+
+.msc-green {
+  color: #34bf49;
+}
+
+#video-background {
+  margin-top: -100vh;
+  z-index: -99;
+  object-fit: cover;
+  height: 100vh;
+  width: 100vw;
+  position: absolute;
+}
+
+#btn-up {
+  position: fixed;
+  bottom: 0;
+  right: 15px;
+  z-index: 99;
+  font-size: 18px;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 15px;
+  border-radius: 4px;
+  display: block;
+  transition: 1s;
+  opacity: 0;
+}
+
+#logo-whatsapp {
+  margin-top: -0.1px;
+  margin-left: -40px;
+  position: absolute;
+}
+
+#mc_logo {
+  height: 150px;
+  width: 180px;
+  margin: 0 auto;
+  left: 0;
+  right: 0;
+  position: absolute;
+  margin-top: -180px;
+}
+
+.font-shadow {
+  text-shadow: 2px 4px 3px rgba(0, 0, 0, 0.6);
+}
+
+/* Responsive Video Background */
+
+@media only screen and (max-width: 850px) {
+  .mc_title {
+    font-size: 5vh;
+    letter-spacing: 0ch;
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-top: 60px;
+  }
+
+  .mc_description {
+    margin-top: 5px !important;
+    font-size: 3vh !important;
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+
+  .copyright {
+    margin-left: 5px;
+    margin-right: 5px;
+  }
+
+  .service-container {
+    margin-top: 8vh;
+  }
+
+  #mc_logo {
+    height: 150px;
+    width: 180px;
+    margin: 0 auto;
+    left: 0;
+    right: 0;
+    position: absolute;
+    margin-top: -27vh;
+  }
+
+  #logo-whatsapp {
+    margin-top: -1px;
+    margin-left: -31px;
+    position: absolute;
+    height: 27px;
+    width: 27px;
+  }
+}
+
+@media only screen and (max-width: 386px) {
+  .mc_title {
+    margin-top: 100px;
+  }
+}
+
+/* react-burger-menu styles*/
+
+/* Position and sizing of burger button */
+.bm-burger-button {
+  position: fixed;
+  width: 36px;
+  height: 30px;
+  right: 35px;
+  top: 30px;
+  cursor: pointer;
+}
+
+/* Color/shape of burger icon bars */
+.bm-burger-bars {
+  background: #f5e830;
+}
+
+/* Color/shape of burger icon bars on hover*/
+.bm-burger-bars-hover {
+  background: #f5e830;
+}
+
+/* Position and sizing of clickable cross button */
+.bm-cross-button {
+  height: 24px;
+  width: 24px;
+}
+
+/* Color/shape of close button cross */
+.bm-cross {
+  background: #f5e830;
+}
+
+/*
+Sidebar wrapper styles
+Note: Beware of modifying this element as it can break the animations - you should not need to touch it in most cases
+*/
+.bm-menu-wrap {
+  position: fixed;
+  height: 100%;
+}
+
+/* General sidebar styles */
+.bm-menu {
+  background: #34bf49;
+  border-left: solid 3px #f5e830;
+  padding: 2.5em 1.5em 0;
+  font-size: 1.15em;
+}
+
+/* Morph shape necessary with bubble or elastic */
+.bm-morph-shape {
+  fill: #373a47;
+}
+
+/* Wrapper for item list */
+.bm-item-list {
+  color: #f5e830;
+  padding: 0.8em;
+}
+
+/* Individual item */
+.bm-item {
+  display: inline-block;
+  outline: none;
+  cursor: pointer;
+}
+
+/* Styling of overlay */
+.bm-overlay {
+  background: rgba(0, 0, 0, 0.3);
+}

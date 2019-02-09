@@ -1,0 +1,131 @@
+{
+  "home": {
+    "title": {
+      "part1": "Equipo de alta ",
+      "part2": "experiencia ",
+      "part3": "profesional."
+    },
+    "description": "Dispuestos a atender a su mascota como se merece.",
+    "phone": "(+57) 301 659 64 37",
+    "options": [
+      {
+        "name": "Inicio",
+        "classname": "home"
+      },
+      {
+        "name": "Nuestros servicios",
+        "classname": "services"
+      },
+      {
+        "name": "Acerca de nosotros",
+        "classname": "about"
+      },
+      {
+        "name": "Galería",
+        "classname": "gallery"
+      },
+      {
+        "name": "Contáctenos",
+        "classname": "contact"
+      }
+    ]
+  },
+  "services": {
+    "title": "Nuestros servicios",
+    "services": [
+      {
+        "logo": "840644.svg",
+        "title": "Consulta externa y domiciliaria",
+        "description": "Contamos con médicos veterinarios expertos en distintas disciplinas y con la metodología necesaria para emitir diagnósticos que permitirán enfocar los tratamientos de manera eficiente y oportuna."
+      },
+      {
+        "logo": "547987.svg",
+        "title": "Peluqueria",
+        "description": "Contamos con un equipo especializado en el correcto tratamiento del pelo de tu mascota, haciendo que está se vea bella y reluciente."
+      },
+      {
+        "logo": "1169363.svg",
+        "title": "Spa",
+        "description": "Contamos con expertos estilistas en el arreglo de todas las razas de perros y gatos, las mascotas son bañadas utilizando shampoo y jabones de la más alta calidad."
+      },
+      {
+        "logo": "1225576.svg",
+        "title": "Cirugía",
+        "description": "Contamos con quirófano equipado con anestesia inhalada y monitores trans quirúrgicos en donde al anestesista se le permite visualizar permanentemente las constantes de las mascotas."
+      },
+      {
+        "logo": "119042.svg",
+        "title": "Hospitalización",
+        "description": "Contamos con las instalaciones y el personal capacitado para brindar el internamiento de pacientes con fines tanto terapéuticos como diagnostico en donde se requiere la supervisión e intervención continua (24 horas)."
+      },
+      {
+        "logo": "1087535.svg",
+        "title": "Laboratorio Clínico",
+        "description": "Tenemos convenio con distintos laboratorios que nos permiten correr pruebas como química sanguínea en húmeda y seca, lo que facilita la obtención de datos a cualquier hora y en cuestión de minutos."
+      },
+      {
+        "logo": "469387.png",
+        "title": "Imageneología",
+        "description": "Contamos con métodos diagnósticos de alta calidad como son radiología de alta frecuencia que es un equipo de rayos X gentil con el medio ambiente y con mucho menor riesgo para el personal que labora en el área, cumpliendo con las normas oficiales mexicanas al respecto."
+      },
+      {
+        "logo": "620375.svg",
+        "title": "Vacunaciones",
+        "description": "Contamos con un control riguros de todas las vacunas necesarias para el bienestar de tu mascota."
+      },
+      {
+        "logo": "1152410.svg",
+        "title": "Pet Shop",
+        "description": "Contamos con los mejores productos y accesorios que hagan feliz a su mascota; Concentrados, productos de belleza, juguetes y mucho más."
+      },
+      {
+        "logo": "993280.svg",
+        "title": "Profilaxis",
+        "description": "Contamos con las herramientas necesarias para una profunda limpieza dental que permita la eliminación de la placa y sarro dental, contribuyendo a la buena salud de las encías."
+      }
+    ]
+  },
+  "about": {
+    "title": "Acerca de nosotros",
+    "description": "Mascoclinica fundada en el año 2015 tiene como misión Satisfacer la necesidad médico-clínica de los pacientes brindando un servicio de excelente calidad para así alcanzar nuestro objetivo principal que es la salud y bienestar de las mascotas.",
+    "mision": {
+      "title": "Nuestra Misión",
+      "description": "Satisfacer las necesidades médicas y estéticas (peluquerias y spa) brindando un servicio de excelente calidad para así alcanzar nuestro objetivo principal que es la salud y bienestar de nuestros pacientes.",
+      "img": ""
+    },
+    "vision": {
+      "title": "Nuestra Visión",
+      "description": "Ser una clínica lider a nivel regional por su amplio portafolio de servicios con estandares de alta calidad, brindando excelencia y calor de hogar a todos nuestros pacientes.",
+      "img": ""
+    },
+    "message": "La mirada de tu mascota es el mejor espejo donde puedes comprobar la grandeza de tu alma."
+  },
+  "gallery": {},
+  "contact": {
+    "title": "Contáctenos",
+    "information": {
+      "address": "Transversal 54# 27 - 75 Avenida Bosque Sector San Isidro | Cartagena, Bolívar - Colombia",
+      "email": "mascoclinica@outlook.com",
+      "telephone": "(055) 643 10 08",
+      "phone": "301 659 64 37"
+    },
+    "SocialNetworkAccounts": [
+      {
+        "iconClass": "fab fa-facebook facebook",
+        "url": "https://www.facebook.com/mascoclinica"
+      },
+      {
+        "iconClass": "fab fa-instagram instagram",
+        "url": "https://www.instagram.com/mascoclinica"
+      },
+      {
+        "iconClass": "fab fa-youtube youtube",
+        "url": "https://www.youtube.com/channel/UCJXGK8ObegUmPGscZ0j-i4g"
+      }
+    ]
+  },
+  "footer": {
+    "creator": "Producido por ",
+    "url": "https://juanbatty.com"
+  }
+}

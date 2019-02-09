@@ -1,0 +1,41 @@
+.services p {
+  text-align: justify;
+}
+
+.services h3 {
+  font-size: 28px;
+  font-weight: 700;
+}
+
+.service-container {
+  margin-top: 20vh;
+}
+
+.logo-content {
+  height: 90px;
+  width: 90px;
+  border-radius: 90px;
+  background-color: #fff02e;
+  margin: 0 auto;
+  border: 4px dotted #34bf49;
+}
+
+.logo-content img {
+  margin: 17px;
+  height: 50px;
+  width: 50px;
+}
+
+.line {
+  height: 2px;
+  width: 60px;
+  background: #34bf49;
+  margin: 0 auto;
+  margin-top: -5px;
+}
+
+.pet_footprint {
+  background-image: url('../../assets/img/pet_footprint.png');
+  background-repeat: no-repeat;
+  background-position-x: left;
+}
